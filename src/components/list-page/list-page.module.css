@@ -1,0 +1,36 @@
+.mainContainer {
+  margin: 0 auto;
+  max-width: 952px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.controls:last-of-type {
+  margin-bottom: 0;
+}
+
+.input {
+  max-width: 204px;
+}
+
+.linkedList {
+  display: flex;
+  justify-content: center;
+  padding: 120px 0 0;
+  margin: 0;
+  list-style: none;
+}
+
+.linkedListItem {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  margin-left: 16px;
+  margin-right: 16px;
+}
