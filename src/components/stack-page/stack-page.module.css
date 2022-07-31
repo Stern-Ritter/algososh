@@ -1,0 +1,48 @@
+.mainContainer {
+  margin: 0 auto;
+  max-width: 828px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  max-width: 377px;
+  margin-right: 12px;
+}
+
+.add {
+  min-width: 121px;
+  margin-right: 12px;
+}
+
+.delete {
+  min-width: 108px;
+}
+
+.clear {
+  min-width: 119px;
+}
+
+.stack {
+  composes: container;
+  padding: 52px 0 0;
+  margin: 0;
+  list-style: none;
+}
+
+.stackItem {
+  margin-right: 16px;
+}
+
+.stackItem:last-of-type {
+  margin-right: 0;
+}

@@ -1,0 +1,49 @@
+.mainContainer {
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  min-width: 205px;
+  margin-right: 12px;
+}
+
+.button:last-of-type {
+  margin-right: 0;
+}
+
+.input {
+  margin-right: 40px;
+}
+
+.input:last-of-type {
+  margin-right: 0;
+}
+
+.array {
+  composes: container;
+  padding: 48px 0 0;
+  margin: 0;
+  min-height: 368px;
+  align-items: flex-end;
+  list-style: none;
+}
+
+.arrayElement {
+  margin-right: 10px;
+}
+
+.arrayElement:last-of-type {
+  margin-right: 0;
+}
