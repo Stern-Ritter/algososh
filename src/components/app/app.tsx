@@ -7,12 +7,13 @@ import { QueuePage } from "../queue-page/queue-page";
 import { StringComponent } from "../string/string";
 import { SortingPage } from "../sorting-page/sorting-page";
 import { StackPage } from "../stack-page/stack-page";
+import styles from "./sorting-page.module.css";
 
 import "./app.css";
 
 function App() {
   return (
-    <div className="app">
+    <div className={styles.app}>
       <BrowserRouter>
         <Switch>
           <Route path="/" exact>
