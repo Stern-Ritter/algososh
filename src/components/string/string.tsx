@@ -5,7 +5,7 @@ import { Circle } from "../ui/circle/circle";
 import { SolutionLayout } from "../ui/solution-layout/solution-layout";
 import { ElementStates } from "../../types/element-states";
 import { Letter } from "../../types/letter";
-import { swap, sleep } from "../../utils/utils";
+import { reverseString } from "./utils";
 import { DELAY_IN_MS } from "../../constants/delays";
 import styles from "./string.module.css";
 
@@ -26,28 +26,7 @@ export const StringComponent: React.FC = () => {
         .map((letter) => ({ letter, state: ElementStates.Default }));
       setLettersArray(letters);
 
-      await sleep(DELAY_IN_MS);
-      const { length } = letters;
-      for (let i = 0; i <= Math.floor(length / 2); i += 1) {
-        const fistElementIdx = i;
-        const secondElementIdx = length - i - 1;
-
-        if (fistElementIdx !== secondElementIdx) {
-          letters[fistElementIdx].state = ElementStates.Changing;
-          letters[secondElementIdx].state = ElementStates.Changing;
-          setLettersArray([...letters]);
-
-          await sleep(DELAY_IN_MS);
-          swap(letters, fistElementIdx, secondElementIdx);
-
-          letters[fistElementIdx].state = ElementStates.Modified;
-          letters[secondElementIdx].state = ElementStates.Modified;
-          setLettersArray([...letters]);
-        } else {
-          letters[fistElementIdx].state = ElementStates.Modified;
-          setLettersArray([...letters]);
-        }
-      }
+      await reverseString(letters, setLettersArray, DELAY_IN_MS);
 
       setIsLoading(false);
     },

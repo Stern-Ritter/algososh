@@ -1,0 +1,5 @@
+const DEFAULT_COLOR = "rgb(0, 50, 255)";
+const CHANGING_COLOR = "rgb(210, 82, 225)";
+const MODIFIED_COLOR = "rgb(127, 224, 81)";
+
+export { DEFAULT_COLOR, CHANGING_COLOR, MODIFIED_COLOR };
